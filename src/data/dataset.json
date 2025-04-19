@@ -1,0 +1,4 @@
+[
+    {"id":1,"value":42,"category":"A","x":0.1,"y":0.3,"color":"#ff0000","time":2},
+    {"id":2,"value":75,"category":"B","x":0.7,"y":0.5,"color":"#00ff00","time":5}
+]

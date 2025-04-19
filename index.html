@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Data Visualizer</title>
+    <style>
+        body { margin: 0; overflow: hidden; font-family: Arial, sans-serif; }
+        #app { width: 100vw; height: 100vh; position: relative; }
+        #controls { 
+            position: absolute; 
+            top: 10px; 
+            left: 100px; 
+            background: rgba(0, 0, 0, 0.8); 
+            color: white; 
+            padding: 15px; 
+            border-radius: 8px;
+        }
+        #stats { 
+            position: absolute; 
+            top: 10px; 
+            right: 10px; 
+            background: rgba(0, 0, 0, 0.8); 
+            color: white; 
+            padding: 15px; 
+            border-radius: 8px;
+        }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div id="controls">
+            <div>
+                <label>Time Range</label>
+                <input type="range" id="timeSlider" min="0" max="100" value="50">
+            </div>
+            <div>
+                <label>Category</label>
+                <select id="categoryFilter">
+                    <option value="all">All</option>
+                    <option value="A">Category A</option>
+                    <option value="B">Category B</option>
+                </select>
+            </div>
+            <button id="exportPng">Export PNG</button>
+            <button id="exportVideo">Export Video</button>
+        </div>
+        <div id="stats">
+            <div>Average: <span id="avgValue">0</span></div>
+            <div>Max: <span id="maxValue">0</span></div>
+            <div>Count: <span id="particleCount">0</span></div>
+        </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
